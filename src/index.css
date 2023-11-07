@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .parent {
+    width: 100%;
+    height: 750px;
+  }
+  
+  .child {
+    width: 100%;
+    height: 750px;
+  }
+  
+  .container1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 5px;
+  }
+  
+  .btn {
+    font-size: 1rem;
+    padding: 10px;
+    color: #006CFF;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .pop-up {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .pop-up-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .pop-up-input {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .pop-up-btns {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .pop-up-btn {
+    padding: 10px 20px;
+    color: #006CFF;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .all-todos {
+    width: 98%;
+    margin: auto;
+    list-style: none;
+    color: #252A31;
+  }
+  
+  .single-todo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    overflow: auto;
+  }
+
+  .todo-btns{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .round-checkbox {
+    clip-path: circle(48% at 50% 50%);
+    margin-right: 10px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .edit-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width:55vw;
+  }
+  .status{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .status-btn {
+    padding: 8px;
+    text-align: center;
+    border: none; 
+     border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .status-btn.active {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .complete {
+    padding: 15px;
+    border-radius: 50%;
+    background: #61DEA4;
+    height: 10px;
+    align-self: center;
+  }
+  
+  .incomplete {
+    padding: 15px;
+    border-radius: 50%;
+    background: #F45E6D;
+    height: 10px;
+    align-self: center;
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .btn,
+    .pop-up-btn {
+      font-size: 0.9rem;
+    }
+  
+    .pop-up-input {
+      height: 100px;
+      font-size: 0.9rem;
+    }
+  
+    .status-btn {
+      padding: 6px;
+    }
+
+    .complete{
+      padding: 10px;
+    }
+    .incomplete{
+      padding: 10px;
+    }
+  
+    .footer {
+      padding: 10px;
+    }
+  }
+
+ 
+
+  .abc{
+    display: flex;
+    align-items: center;
+  }
+
+  
