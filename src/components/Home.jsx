@@ -179,57 +179,57 @@ const Home = () => {
               </button>
             </div>
             <ul className="all-todos">
-              {todoFilterPage.map((e) => (
-                <li className="single-todo" key={e.id}>
+              {todoFilterPage.map((todo) => (
+                <li className="single-todo" key={todo.id}>
                   <div>
                     <div className="abc">
                       <input
                         className="round-checkbox"
                         type="checkbox"
-                        defaultChecked={e.completed}
-                        onChange={() => handleCheckbox(e.id)}
+                        defaultChecked={todo.completed}
+                        onChange={() => handleCheckbox(todo.id)}
                       />
-                      {e.completed ? (
-                        <s>{e.text}</s>
+                      {todo.completed ? (
+                        <s>{todo.text}</s>
                       ) : (
                         <div>
-                          {editedTodoId === e.id ? (
-                            <form onSubmit={() => handleSaveEdit(e.id)}>
+                          {editedTodoId === todo.id ? (
+                            <form onSubmit={() => handleSaveEdit(todo.id)}>
                               <input
                                 className="edit-input"
                                 type="text"
                                 value={editText}
                                 onChange={(e) => setEditText(e.target.value)}
-                                onBlur={() => handleSaveEdit(e.id)}
+                                onBlur={() => handleSaveEdit(todo.id)}
                               />
                             </form>
                           ) : (
-                            <div>{e.text}</div>
+                            <div>{todo.text}</div>
                           )}
                         </div>
                       )}
                     </div>
                   </div>
                   <div className="todo-btns">
-                    {editedTodoId === e.id ? (
+                    {editedTodoId === todo.id ? (
                       <FontAwesomeIcon
                         className="btn"
-                        onClick={() => handleSaveEdit(e.id)}
+                        onClick={() => handleSaveEdit(todo.id)}
                         icon={faCircleCheck}
                       />
                     ) : (
                       <FontAwesomeIcon
                         className="btn"
-                        onClick={() => handleEdit(e.id)}
+                        onClick={() => handleEdit(todo.id)}
                         icon={faPenToSquare}
                       />
                     )}
                     <FontAwesomeIcon
                       className="btn"
-                      onClick={() => handleDelete(e.id)}
+                      onClick={() => handleDelete(todo.id)}
                       icon={faTrash}
                     />
-                    {e.completed ? (
+                    {todo.completed ? (
                       <div className="complete"></div>
                     ) : (
                       <div className="incomplete"></div>
